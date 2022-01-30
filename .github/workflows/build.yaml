@@ -45,7 +45,7 @@ jobs:
         env:
           CIBW_BEFORE_BUILD: 'pip install cmake'
           CIBW_BUILD: 'cp38-* cp39-* cp310-*'
-          CIBW_ARCHS_MACOS: universal2
+          CIBW_ARCHS_MACOS: x86_64 arm64 universal2
           CIBW_ARCHS_LINUX: auto64
           CIBW_ARCHS_WINDOWS: auto64
 

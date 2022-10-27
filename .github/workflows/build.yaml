@@ -8,13 +8,13 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ubuntu-20.04, macos-10.15]
+        os: [ubuntu-latest, macos-latest]
     env:
       REPO_DIR: 'dlib'
-      BUILD_COMMIT: 'v19.22'
-      CIBUILDWHEEL_VERSION: '1.10.0'
+      BUILD_COMMIT: 'v19.24'
+      CIBUILDWHEEL_VERSION: '2.11.2'
       CIBW_BEFORE_BUILD: 'pip install cmake'
-      CIBW_BUILD: 'cp37-* cp38-* cp39-*'
+      CIBW_BUILD: 'cp38-* cp39-* cp310-*'
       CIBW_ARCHS: auto64
 
     steps:
